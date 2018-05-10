@@ -12,16 +12,18 @@
 		77C4ECE720A46BB700E1FBCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C4ECE520A46BB700E1FBCD /* Main.storyboard */; };
 		77C4ECE920A46BB800E1FBCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77C4ECE820A46BB800E1FBCD /* Assets.xcassets */; };
 		77C4ECEC20A46BB800E1FBCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C4ECEA20A46BB800E1FBCD /* LaunchScreen.storyboard */; };
+		77C4ECF420A46BD400E1FBCD /* CVCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C4ECF320A46BD400E1FBCD /* CVCodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		77C4ECDE20A46BB700E1FBCD /* anbddde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = anbddde.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77C4ECDE20A46BB700E1FBCD /* CVCodeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVCodeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C4ECE120A46BB700E1FBCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77C4ECE320A46BB700E1FBCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77C4ECE620A46BB700E1FBCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77C4ECE820A46BB800E1FBCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77C4ECEB20A46BB800E1FBCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77C4ECED20A46BB800E1FBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77C4ECF320A46BD400E1FBCD /* CVCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +48,7 @@
 		77C4ECDF20A46BB700E1FBCD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				77C4ECDE20A46BB700E1FBCD /* anbddde.app */,
+				77C4ECDE20A46BB700E1FBCD /* CVCodeView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +62,7 @@
 				77C4ECE820A46BB800E1FBCD /* Assets.xcassets */,
 				77C4ECEA20A46BB800E1FBCD /* LaunchScreen.storyboard */,
 				77C4ECED20A46BB800E1FBCD /* Info.plist */,
+				77C4ECF320A46BD400E1FBCD /* CVCodeView.swift */,
 			);
 			path = anbddde;
 			sourceTree = "<group>";
@@ -67,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		77C4ECDD20A46BB700E1FBCD /* anbddde */ = {
+		77C4ECDD20A46BB700E1FBCD /* CVCodeView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77C4ECF020A46BB800E1FBCD /* Build configuration list for PBXNativeTarget "anbddde" */;
+			buildConfigurationList = 77C4ECF020A46BB800E1FBCD /* Build configuration list for PBXNativeTarget "CVCodeView" */;
 			buildPhases = (
 				77C4ECDA20A46BB700E1FBCD /* Sources */,
 				77C4ECDB20A46BB700E1FBCD /* Frameworks */,
@@ -79,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = anbddde;
+			name = CVCodeView;
 			productName = anbddde;
-			productReference = 77C4ECDE20A46BB700E1FBCD /* anbddde.app */;
+			productReference = 77C4ECDE20A46BB700E1FBCD /* CVCodeView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 77C4ECD920A46BB700E1FBCD /* Build configuration list for PBXProject "anbddde" */;
+			buildConfigurationList = 77C4ECD920A46BB700E1FBCD /* Build configuration list for PBXProject "CVCodeView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				77C4ECDD20A46BB700E1FBCD /* anbddde */,
+				77C4ECDD20A46BB700E1FBCD /* CVCodeView */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C4ECF420A46BD400E1FBCD /* CVCodeView.swift in Sources */,
 				77C4ECE420A46BB700E1FBCD /* ViewController.swift in Sources */,
 				77C4ECE220A46BB700E1FBCD /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +287,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E8G2KPMF2N;
 				INFOPLIST_FILE = anbddde/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +306,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E8G2KPMF2N;
 				INFOPLIST_FILE = anbddde/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		77C4ECD920A46BB700E1FBCD /* Build configuration list for PBXProject "anbddde" */ = {
+		77C4ECD920A46BB700E1FBCD /* Build configuration list for PBXProject "CVCodeView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77C4ECEE20A46BB800E1FBCD /* Debug */,
@@ -324,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77C4ECF020A46BB800E1FBCD /* Build configuration list for PBXNativeTarget "anbddde" */ = {
+		77C4ECF020A46BB800E1FBCD /* Build configuration list for PBXNativeTarget "CVCodeView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77C4ECF120A46BB800E1FBCD /* Debug */,
