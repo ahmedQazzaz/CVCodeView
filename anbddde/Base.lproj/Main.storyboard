@@ -6,14 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Code Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="anbddde" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CVCodeView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="08V-Ll-aOC"/>
                         <viewControllerLayoutGuide type="bottom" id="TtG-Fe-NRO"/>
@@ -22,9 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2x-21-0aE" customClass="CVCodeView" customModule="anbddde" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2x-21-0aE" customClass="CVCodeView" customModule="CVCodeView" customModuleProvider="target">
                                 <rect key="frame" x="16" y="320" width="343" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3Oh-HF-hJ7"/>
                                 </constraints>
@@ -39,17 +39,18 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="line_color">
-                                        <color key="value" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.98612123727798462" green="0.75421316964285712" blue="0.3350490927696228" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="line_selected">
-                                        <color key="value" red="0.55871421099999996" green="0.0" blue="0.54805201290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="text_color">
-                                        <color key="value" white="0.83049665179999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="text_placeHolder_color">
                                         <color key="value" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text_placeHolder" value="❓"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="codeDelegate" destination="BYZ-38-t0r" id="dKX-ak-k9z"/>

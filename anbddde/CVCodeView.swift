@@ -14,6 +14,7 @@ class CVCodeView: UIView {
     
     
     @IBOutlet var codeDelegate : CVCodeViewDelegate?
+    @IBOutlet var delegate : UITextFieldDelegate?
     
     
     @IBInspectable var digits : Int = 4
@@ -35,7 +36,7 @@ class CVCodeView: UIView {
             str.append(txt.text ?? "")
         }
         
-            return str;
+        return str;
         
     }
     private var fields : [[String:Any]] = []
@@ -52,8 +53,23 @@ class CVCodeView: UIView {
         let tt =  self.getTheFirstSelectedField()
         if(tt != nil){
             self.selectFiled(tt!)
+        }else{
+            self.clearAll()
+            self.didTouchOnView(gesture)
         }
         
+    }
+    
+    func clearAll(){
+        for item in fields{
+            let txt  = item["field"] as! UITextField
+            txt.text = ""
+            if(currentField != nil){
+                if((currentField!["field"] as! UITextField) == txt){
+                    self.deSelectField(item)
+                }
+            }
+        }
     }
     
     func getTheFirstSelectedField()->[String:Any]?{
@@ -145,12 +161,37 @@ class CVCodeView: UIView {
         }
         
     }
-
+    
 }
 
 extension CVCodeView : UITextFieldDelegate{
     
-  
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(self.delegate != nil){
+            return (self.delegate?.textFieldShouldReturn!(textField)) ?? false
+        }
+        
+        return false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if(self.delegate != nil){
+            self.delegate?.textFieldDidEndEditing!(textField)
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        if(self.delegate != nil){
+            self.delegate?.textFieldDidBeginEditing!(textField)
+        }
+        
+    }
+    
+    
+    
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if(string.count == 0){
@@ -177,13 +218,15 @@ extension CVCodeView : UITextFieldDelegate{
                     self.selectFiled(fields[index])
                 }else{
                     
-                        if(self.codeDelegate != nil){
-                            self.codeDelegate!.didFinishEnterCode?(field: self, text: "\(self.stringValue)\(string)")
-                        }
+                    if(self.codeDelegate != nil){
+                        textField.text = string
+                        self.codeDelegate!.didFinishEnterCode?(field: self, text: "\(self.stringValue)\(string)")
+                        return false
+                    }
                     
                 }
                 
-              textField.text = string
+                textField.text = string
             }else{
                 
                 if(index < fields.count-1){
@@ -193,9 +236,9 @@ extension CVCodeView : UITextFieldDelegate{
                     (currentField!["field"] as! UITextField).text = string
                 }
                 
-                        if(self.codeDelegate != nil){
-                            self.codeDelegate!.didFinishEnterCode?(field: self, text: self.stringValue)
-                        }
+                if(self.codeDelegate != nil){
+                    self.codeDelegate!.didFinishEnterCode?(field: self, text: self.stringValue)
+                }
                 
             }
         }
@@ -211,7 +254,7 @@ extension CVCodeView : UITextFieldDelegate{
 
 @objc protocol CVCodeViewDelegate {
     @objc optional
-     func didFinishEnterCode(field : CVCodeView, text : String)
+    func didFinishEnterCode(field : CVCodeView, text : String)
 }
 
 class specialTextField : UITextField{
@@ -220,3 +263,4 @@ class specialTextField : UITextField{
         self.delegate?.textField!(self, shouldChangeCharactersIn: NSMakeRange(0, 0), replacementString: "")
     }
 }
+
